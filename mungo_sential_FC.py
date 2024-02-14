@@ -37,8 +37,6 @@ def getPixelValues(info, inputs, outputs, otherargs):
     """
     sites = inputs.sites[0]
     fc = inputs.fc
-    fc = np.where(fc >= 100, fc - 100, 0)
-    fc[inputs.fc == 0] = 255
     sitesPresent = np.unique(sites[sites != 0])
     if len(sitesPresent) > 0:
         uids = sites[sites != 0]
@@ -101,7 +99,7 @@ with open(csvfile, 'w') as f:
     f.write('Date,Id,pixels,meanBare,stdevBare,meanGreen,stdevGreen,meanDead,stdevDead\n')
 
 # Iterate over images and get pixel values
-imageList = glob.glob(os.path.join(imageDir, r'*.img'))
+imageList = glob.glob(os.path.join(imageDir, r'*.tif'))
 for imagefile in imageList:
     extract_pixels(polyfile, imagefile, csvfile)
 
