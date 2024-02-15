@@ -57,7 +57,7 @@ def extract_pixels(polyfile, imagefile, csvfile):
     outfiles = applier.FilenameAssociations()
     otherargs = applier.OtherInputs()
     controls = applier.ApplierControls()
-    controls.setBurnAttribute("Id")
+    controls.setBurnAttribute("FID")
     controls.setReferenceImage(imagefile)
     controls.setFootprintType(applier.BOUNDS_FROM_REFERENCE)
     infiles.sites = polyfile
