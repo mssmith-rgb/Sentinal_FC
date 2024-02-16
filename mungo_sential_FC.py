@@ -88,11 +88,11 @@ def extract_pixels(polyfile, imagefile, csvfile):
 
 
 # Inputs
-polyfile = r'Z:\MattS\Data\Sentinal2_FC\shape_files\Bool_Xs_aoi_albers.shp'
-imageDir = r'Z:\MattS\Data\Sentinal2_FC\Boolcoomatta'
+polyfile = r'Z:\MattS\Data\Sentinal2_FC\shape_files\Ool_Xs_aoi_albers.shp'
+imageDir = r'Z:\MattS\Data\Sentinal2_FC\Oolambeyan'
 
 # Outputs
-csvfile = r'Z:\MattS\Data\Sentinal2_FC\extracted_FC_timeseries\Boolcoomatta_Sentinal2_FC.csv'
+csvfile = r'Z:\MattS\Data\Sentinal2_FC\extracted_FC_timeseries\Ool_Sentinal2_FC.csv'
 
 # Write the csvfile header 
 with open(csvfile, 'w') as f:
