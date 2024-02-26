@@ -6,8 +6,8 @@ from osgeo import gdal, ogr
 from datetime import datetime
 
 # Inputs and outputs
-polygon = r'S:\mungo\shapefiles\mungo_aoi_albers.shp'
-dstDir = r'S:\mungo\sentinel2_seasonal_fractional_cover'
+polygon = r'Z:\MattS\Data\Sentinal2_FC\shape_files\fowlers_aoi_albers.shp'
+dstDir = r'Z:\MattS\Data\Sentinal2_FC\Fowlers_Gap'
 
 # Read in shapefile and get bounding box
 basename = os.path.basename(polygon).replace(r'.shp', '')
