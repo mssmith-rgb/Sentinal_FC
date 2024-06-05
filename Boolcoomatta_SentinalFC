@@ -88,11 +88,11 @@ def extract_pixels(polyfile, imagefile, csvfile):
 
 
 # Inputs
-polyfile = r'Z:\MattS\Data\Sentinal2_FC\shape_files\Flinders_polygons_aoi_albers.shp'
-imageDir = r'Z:\MattS\Data\Sentinal2_FC\Flinders'
+polyfile = r'Z:\MattS\Data\Sentinal2_FC\shape_files\SA_treatment_polys_aoi_albers.shp'
+imageDir = r'Z:\MattS\Data\Sentinal2_FC\South_Australia'
 
 # Outputs
-csvfile = r'Z:\MattS\Data\Sentinal2_FC\extracted_FC_timeseries\Flinders_Sentinal2_FC.csv'
+csvfile = r'Z:\MattS\Data\Sentinal2_FC\extracted_FC_timeseries\SA_Sentinal2_FC.csv'
 
 # Write the csvfile header 
 with open(csvfile, 'w') as f:
@@ -105,58 +105,3 @@ for imagefile in imageList:
 
 print('Pixels extracted')
 
-# Inputs
-polyfile = r'Z:\MattS\Data\Sentinal2_FC\shape_files\gawler_ranger_treatment_polys_aoi_albers.shp'
-imageDir = r'Z:\MattS\Data\Sentinal2_FC\Galwer'
-
-# Outputs
-csvfile = r'Z:\MattS\Data\Sentinal2_FC\extracted_FC_timeseries\Gawler_Sentinal2_FC.csv'
-
-# Write the csvfile header 
-with open(csvfile, 'w') as f:
-    f.write('Date,Id,pixels,meanBare,stdevBare,meanGreen,stdevGreen,meanDead,stdevDead\n')
-
-# Iterate over images and get pixel values
-imageList = glob.glob(os.path.join(imageDir, r'*.tif'))
-for imagefile in imageList:
-    extract_pixels(polyfile, imagefile, csvfile)
-
-print('Pixels extracted')
-
-
-# Inputs
-polyfile = r'Z:\MattS\Data\Sentinal2_FC\shape_files\gammon_treat_polys_aoi_albers.shp'
-imageDir = r'Z:\MattS\Data\Sentinal2_FC\Gammon'
-
-# Outputs
-csvfile = r'Z:\MattS\Data\Sentinal2_FC\extracted_FC_timeseries\Gammon_Sentinal2_FC.csv'
-
-# Write the csvfile header 
-with open(csvfile, 'w') as f:
-    f.write('Date,Id,pixels,meanBare,stdevBare,meanGreen,stdevGreen,meanDead,stdevDead\n')
-
-# Iterate over images and get pixel values
-imageList = glob.glob(os.path.join(imageDir, r'*.tif'))
-for imagefile in imageList:
-    extract_pixels(polyfile, imagefile, csvfile)
-
-print('Pixels extracted')
-
-# Inputs
-polyfile = r'Z:\MattS\Data\Sentinal2_FC\shape_files\witchelina_treat_polys_aoi_albers.shp'
-imageDir = r'Z:\MattS\Data\Sentinal2_FC\Witchelina'
-
-# Outputs
-csvfile = r'Z:\MattS\Data\Sentinal2_FC\extracted_FC_timeseries\Witchelina_Sentinal2_FC.csv'
-
-# Write the csvfile header 
-with open(csvfile, 'w') as f:
-    f.write('Date,Id,pixels,meanBare,stdevBare,meanGreen,stdevGreen,meanDead,stdevDead\n')
-
-# Iterate over images and get pixel values
-imageList = glob.glob(os.path.join(imageDir, r'*.tif'))
-for imagefile in imageList:
-    extract_pixels(polyfile, imagefile, csvfile)
-
-print('Pixels extracted')
-# In[ ]:
